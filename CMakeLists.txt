@@ -3,4 +3,6 @@ project(DeepLearning)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(DeepLearning main.cpp)
+include_directories(include)
+
+add_executable(DeepLearning src/main.cpp include/two_layer_net.h)

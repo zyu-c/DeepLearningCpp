@@ -1,0 +1,8 @@
+#ifndef DEEPLEARNING_TWO_LAYER_NET_H
+#define DEEPLEARNING_TWO_LAYER_NET_H
+
+class TwoLayerNet{
+
+};
+
+#endif //DEEPLEARNING_TWO_LAYER_NET_H
