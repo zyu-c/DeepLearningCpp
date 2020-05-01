@@ -68,7 +68,27 @@ public:
         }
         return multiplication(dout, wt);
     }
+};
 
+class Relu{
+private:
+    std::vector<std::vector<double>> x;
+
+public:
+    std::vector<std::vector<double>> forward(std::vector<std::vector<double>> x){
+        this->x = x;
+        std::vector<std::vector<double>> ans(x.size(), std::vector<double>(x.at(0).size()));
+        for(int i = 0; i < x.size(); i++){
+            for(int j = 0; j < x.at(0).size(); j++){
+                if(x.at(i).at(j) > 0){
+                    ans.at(i).at(j) = x.at(i).at(j);
+                }else{
+                    ans.at(i).at(j) = 0.0;
+                }
+            }
+        }
+        return ans;
+    }
 };
 
 #endif //DEEPLEARNING_BACKPROPAGATION_H
