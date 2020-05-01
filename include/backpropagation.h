@@ -89,6 +89,20 @@ public:
         }
         return ans;
     }
+
+    std::vector<std::vector<double>> backward(std::vector<std::vector<double>> dout){
+        std::vector<std::vector<double>> ans(dout.size(), std::vector<double>(dout.at(0).size()));
+        for(int i = 0; i < dout.size(); i++){
+            for(int j = 0; j < dout.at(0).size(); j++){
+                if(x.at(i).at(j) > 0){
+                    ans.at(i).at(j) = dout.at(i).at(j);
+                }else{
+                    ans.at(i).at(j) = 0.0;
+                }
+            }
+        }
+        return ans;
+    }
 };
 
 #endif //DEEPLEARNING_BACKPROPAGATION_H
