@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(include)
 
-add_executable(DeepLearning src/main.cpp include/two_layer_net.h)
+add_executable(DeepLearning src/main.cpp include/two_layer_net.h include/vector_function.h)
